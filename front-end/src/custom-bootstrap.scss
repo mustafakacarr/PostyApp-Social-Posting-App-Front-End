@@ -1,0 +1,56 @@
+@import "~bootstrap/scss/bootstrap";
+$primary-color: #2980b9;
+$secondary-color: #2c3e50;
+$third-color: #e74c3c;
+$teal-color: #0f7d5c;
+
+$success-color: #16a085;
+$danger-color: #e74c3c;
+
+.btn-success {
+  background-color: $success-color;
+  color: white;
+  border-color: #27ae60;
+}
+.btn-primary {
+  background-color: $primary-color;
+  color: white;
+  border-color: white;
+}
+.btn-primary:hover {
+  background-color: $primary-color;
+  opacity: 0.9;
+    border-color: white;
+}
+.btn-secondary {
+  background-color: $secondary-color;
+  color: white;
+   border-color: white;
+}
+
+.btn-teal {
+  background-color: $teal-color;
+  color: white;
+   border-color: white;
+}
+.btn-teal:hover {
+  background-color: $teal-color;
+  opacity: 0.9;
+  color: white;
+}
+.btn-teal:active {
+  background-color: $success-color !important;
+  color: white !important;
+  border: none;
+}
+.bg-primary {
+  background-color: $primary-color !important;
+}
+.alert-success {
+  background-color: $success-color;
+  color: white;
+}
+.alert-danger {
+  background-color: $danger-color;
+  color: white;
+}
