@@ -14,7 +14,6 @@ For going to the  back end repository, [click here](https://github.com/mustafaka
  
 **Front End**
  - **ReactJS**
- - Redux
  It will store user datas with token in localStorage. 
  
 **DevOps**
