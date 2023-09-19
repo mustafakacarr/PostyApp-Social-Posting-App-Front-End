@@ -35,8 +35,8 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item px-3">
+          <ul className="navbar-nav me-auto mb-lg-0">
+            <li className="nav-item px-3 mt-3 mt-sm-0 ">
               <Link
                 to="/"
                 aria-current="page"
@@ -50,7 +50,7 @@ const Navbar = () => {
           <ul className="navbar-nav ml-auto">
             {user && user.id != null ? (
               <>
-                <li className="nav-item px-3 mt-sm-0">
+                <li className="nav-item px-3 mt-3 mt-sm-0">
                   <Link
                     to={`/users/${user.id}`}
                     className="text-white text-decoration-none"
@@ -59,9 +59,12 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="nav-item px-3 mt-3 mt-sm-0">
-                  <span className="text-white btn" onClick={logout}>
+                  <Link
+                    className="text-white text-decoration-none"
+                    onClick={logout}
+                  >
                     <Power /> Logout
-                  </span>
+                  </Link>
                 </li>
               </>
             ) : (
