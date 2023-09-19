@@ -1,5 +1,5 @@
 {
     "rewrites": [
-      { "source": "/api/:path*", "destination": "https://postyapp-04194dc6a480.herokuapp.com/:path*" }
+      { "source": "/api/v1.0/:path*", "destination": "https://postyapp-04194dc6a480.herokuapp.com/api/v1.0/:path*" }
     ]
   }
