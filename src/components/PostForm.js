@@ -47,10 +47,6 @@ const PostForm = ({ refreshPosts, user }) => {
               refreshToken: responseRefresh.data.refreshToken,
             })
           );
-              console.log(
-                "🚀 ~ file: PostForm.js:38 ~ handleSubmit ~ error:",
-                error
-              );
           handleSubmit();
         } catch (error) {
           if ((error.response.statusText = "Unauthorized")) {

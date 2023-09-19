@@ -1,11 +1,13 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { CheckCircleFill } from "react-bootstrap-icons";
+import { Link, useNavigate } from "react-router-dom";
 import { postWithoutAuth } from "../../api/ApiCalls";
 
 const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+    const history = useNavigate();
 
   const handleSignup = async () => {
     try {
@@ -13,14 +15,13 @@ const Register = () => {
         username,
         password,
       });
-    } catch (error) {
-    console.log("🚀 ~ file: Register.js:17 ~ handleSignup ~ error:", error)
-    }
+      history("/login", { state: { isRegistered: true } });
+    } catch (error) {}
   };
   return (
-    <div className="container col-4">
-      <h1 className="mt-3 text-center">Register</h1>
-      <div className="card mt-5">
+    <div className="container col-4 ">
+      <h1 className="mt-5 text-center">Register</h1>
+      <div className="card mt-3">
         <div className="card-body">
           <div className="mb-3">
             <label className="form-label" for="inputUsername">
@@ -49,10 +50,10 @@ const Register = () => {
           </div>
         </div>{" "}
       </div>{" "}
-      <div className="text-center">
+      <div className="text-center mt-3">
         Are you already registered? <br />{" "}
         <Link to="/login">
-          <div className="btn btn-primary">Sign in</div>
+          <div className="btn btn-primary mt-2">Sign in</div>
         </Link>{" "}
       </div>
     </div>

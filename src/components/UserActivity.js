@@ -45,9 +45,14 @@ const data =
       <div>
         {userId == JSON.parse(localStorage.getItem("currentUser")).id && (
           <div>
-            <center> Last Activities</center>
-            {activityList.length > 0 && (
+            <h3 className="text-center"> Last Activities</h3>
+            {activityList.length > 0 ? (
               <ActivityTable data={data}></ActivityTable>
+            ) : (
+              <div className="mt-3 text-center">
+                {" "}
+                We couldnt find any activity yet about you
+              </div>
             )}{" "}
           </div>
         )}
