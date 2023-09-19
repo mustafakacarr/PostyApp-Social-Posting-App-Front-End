@@ -19,7 +19,7 @@ const Register = () => {
     } catch (error) {}
   };
   return (
-    <div className="container col-4 ">
+    <div className="container col-lg-4 ">
       <h1 className="mt-5 text-center">Register</h1>
       <div className="card mt-3">
         <div className="card-body">

@@ -37,7 +37,7 @@ const Login = () => {
     history("/");
   };
   return (
-    <div className="container col-4">
+    <div className="container col-lg-4">
       <h1 className="mt-4 text-center">Login</h1>
       {isRegistered && (
         <div

@@ -49,8 +49,8 @@ const Navbar = () => {
 
           <ul className="navbar-nav ml-auto">
             {user && user.id != null ? (
-              <div className="d-flex align-items-center">
-                <li className="nav-item px-3">
+              <>
+                <li className="nav-item px-3 mt-sm-0">
                   <Link
                     to={`/users/${user.id}`}
                     className="text-white text-decoration-none"
@@ -58,20 +58,20 @@ const Navbar = () => {
                     Profile
                   </Link>
                 </li>
-                <li className="nav-item px-3">
+                <li className="nav-item px-3 mt-3 mt-sm-0">
                   <span className="text-white btn" onClick={logout}>
                     <Power /> Logout
                   </span>
                 </li>
-              </div>
+              </>
             ) : (
-              <div className="d-flex align-items-center">
-                <li className="nav-item px-3">
+              <>
+                <li className="nav-item px-3  mt-sm-0">
                   <Link to="/login" className="text-white text-decoration-none">
                     Login
                   </Link>
                 </li>
-                <li className="nav-item px-3">
+                <li className="nav-item px-3 mt-3 mt-sm-0">
                   <Link
                     to="/register"
                     className="text-white text-decoration-none"
@@ -79,7 +79,7 @@ const Navbar = () => {
                     Register
                   </Link>
                 </li>
-              </div>
+              </>
             )}
           </ul>
         </div>
