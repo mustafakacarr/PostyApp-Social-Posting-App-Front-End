@@ -36,7 +36,7 @@ const Home = () => {
                refreshPosts={()=>fetchData()}
                user={user}
              ></PostForm> : ""}
-             {postList && postList.map((post) => (
+             {postList!=[] && postList.map((post) => (
                <Post data={post}></Post>
              ))}
            </div>
